@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+      }
+      nav {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 70px;
+        width: 90%;
+        border-radius: 40px;
+        padding: 0 30px;
+        backdrop-filter: blur(10px);
+        border: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav h1 {
+        font-size: 35px;
+        text-transform: uppercase;
+      }
+      nav ul {
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      nav li {
+        list-style: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+      nav li:hover {
+        background: white;
+      }
+      nav li:hover a {
+        color: green;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        text-transform: capitalize;
+        transition: 0.2s;
+      }
+
+      .msg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: url(https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+          center/cover;
+        color: white;
+      }
+      section p {
+        width: 70%;
+        font-size: 18px;
+      }
+      section .head {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      section button {
+        height: 40px;
+        width: 120px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: transparent;
+        box-shadow: 2px 3px 7px black;
+        color: white;
+        font-weight: 600;
+        background: green;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      section button:hover {
+        color: green;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>sathish</h1>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="msg">
+        <div class="head">this is home page design!</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dicta
+          atque provident quidem voluptas, ducimus numquam, eum a accusantium
+          dolorem pariatur nihil. Magnam blanditiis, placeat, ducimus explicabo
+          non velit, facilis hic voluptatibus enim expedita repellendus optio
+          ipsa mollitia maxime eos.
+        </p>
+        <button>learn more</button>
+      </div>
+    </section>
+  </body>
+</html>
