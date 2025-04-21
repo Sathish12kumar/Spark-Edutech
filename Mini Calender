@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calender</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background: #f3aa4e;
+        height: 100vh;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #111820;
+        letter-spacing: 1px;
+      }
+      .fullPrg {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        height: 350px;
+        width: 350px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 4px 4px 9px #111820;
+        transition: 0.3s;
+      }
+      .month {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #111820;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .info {
+        font-size: 45px;
+        font-weight: 900;
+        height: 250px;
+        background: #111820;
+        width: 80%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .date {
+        color: gray;
+        font-size: 100px;
+        z-index: 2;
+      }
+      .day {
+        color: white;
+        font-size: 35px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        transition: 0.3s;
+        bottom: 10%;
+      }
+      @keyframes gotop {
+        to {
+          bottom: 20%;
+          opacity: 0;
+        }
+      }
+      .fullPrg:hover .date {
+        color: white;
+      }
+      .fullPrg:hover .day {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      .time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(300px);
+        color: gray;
+        transition: 0.3s;
+      }
+      .fullPrg:hover .time {
+        transform: translateY(0px);
+      }
+      .time .clk {
+        height: 40px;
+        width: 50px;
+        margin: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .time span {
+        font-weight: 900;
+        font-size: 25px;
+      }
+      .year {
+        font-size: 19px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>mini Calender</h1>
+    <div class="fullPrg">
+      <div class="month">march</div>
+      <div class="info">
+        <div class="date">12</div>
+        <div class="day">sunday</div>
+        <div class="time">
+          <div class="clk hrs">09</div>
+          <span>:</span>
+          <div class="clk min">23</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    active();
+    function active() {
+      const today = new Date();
+      let date = today.getDate(),
+        day = today.getDay(),
+        month = today.getMonth(),
+        hour = today.getHours(),
+        mins = today.getMinutes();
+
+      let hoursEle = document.querySelector(".time .hrs"),
+        minsEle = document.querySelector(".time .min"),
+        dateEle = document.querySelector(".date"),
+        monthEle = document.querySelector(".month");
+
+      const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      monthEle.innerHTML = monthNames[month];
+      dateEle.innerHTML = date;
+      hoursEle.innerHTML = hour;
+      minsEle.innerHTML = mins;
+    }
+
+    setInterval(() => {
+      active();
+    }, 2000);
+  </script>
+</html>
