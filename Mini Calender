@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Calender</title>
+    <title>Mini Calendar</title>
     <style>
       * {
         padding: 0;
@@ -114,7 +114,7 @@
     </style>
   </head>
   <body>
-    <h1>mini Calender</h1>
+    <h1>mini Calendar</h1>
     <div class="fullPrg">
       <div class="month">march</div>
       <div class="info">
