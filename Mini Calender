@@ -140,6 +140,7 @@
 
       let hoursEle = document.querySelector(".time .hrs"),
         minsEle = document.querySelector(".time .min"),
+        dayEle = document.querySelector(".day"),
         dateEle = document.querySelector(".date"),
         monthEle = document.querySelector(".month");
 
@@ -157,8 +158,18 @@
         "November",
         "December",
       ];
+      const dayNames = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
 
       monthEle.innerHTML = monthNames[month];
+      dayEle.innerHTML = dayNames[day];
       dateEle.innerHTML = date;
       hoursEle.innerHTML = hour;
       minsEle.innerHTML = mins;
