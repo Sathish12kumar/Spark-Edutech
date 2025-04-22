@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Ball⚽</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .fullPrg {
+        height: 100vh;
+        background: #2f2f31;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .frame {
+        height: 80vh;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        width: 80%;
+      }
+      .base {
+        height: 20vh;
+        text-transform: uppercase;
+        width: 80%;
+        letter-spacing: 1px;
+        text-align: center;
+        bottom: 10%;
+        font-size: 90px;
+        font-weight: 900;
+        border-radius: 5px;
+        color: aqua;
+        border-top: 5px solid white;
+      }
+      .ball {
+        transform: translateY(540px);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: white;
+        border: 1px solid white;
+        animation: bounce 3s ease-in infinite;
+        animation-delay: calc(var(--i) * 0.2s);
+      }
+      .ball:nth-child(1) {
+        background: #787774;
+      }
+      .ball:nth-child(2) {
+        background: #9f6b53;
+      }
+      .ball:nth-child(3) {
+        background: #d9730d;
+      }
+      .ball:nth-child(4) {
+        background: #cb912f;
+      }
+      .ball:nth-child(5) {
+        background: #448361;
+      }
+      .ball:nth-child(6) {
+        background: #337ea9;
+      }
+      .ball:nth-child(7) {
+        background: #9065b0;
+      }
+      .ball:nth-child(8) {
+        background: #c14c8a;
+      }
+      .ball:nth-child(9) {
+        background: #d44c47;
+      }
+      .ball:nth-child(10) {
+        background: #fec305;
+      }
+      .ball:nth-child(11) {
+        background: #910d3f;
+      }
+      .ball:nth-child(12) {
+        background: #ff5733;
+      }
+      @keyframes bounce {
+        50% {
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .ball:nth-child(9) {
+          display: none;
+        }
+        .ball:nth-child(10) {
+          display: none;
+        }
+        .ball:nth-child(11) {
+          display: none;
+        }
+        .ball:nth-child(12) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .base {
+          font-size: 60px;
+        }
+      }
+
+      @media (max-width: 450px) {
+        .ball:nth-child(8) {
+          display: none;
+        }
+        .base {
+          font-size: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullPrg">
+      <div class="frame">
+        <div class="ball" style="--i: 0"></div>
+        <div class="ball" style="--i: 1"></div>
+        <div class="ball" style="--i: 2"></div>
+        <div class="ball" style="--i: 3"></div>
+        <div class="ball" style="--i: 4"></div>
+        <div class="ball" style="--i: 5"></div>
+        <div class="ball" style="--i: 6"></div>
+        <div class="ball" style="--i: 7"></div>
+        <div class="ball" style="--i: 8"></div>
+        <div class="ball" style="--i: 9"></div>
+        <div class="ball" style="--i: 10"></div>
+        <div class="ball" style="--i: 11"></div>
+      </div>
+      <div class="base">Bouncing Ball</div>
+    </div>
+  </body>
+</html>
