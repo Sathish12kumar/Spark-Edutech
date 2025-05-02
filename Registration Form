@@ -20,7 +20,7 @@
         box-sizing: border-box;
       }
       body {
-        background: #5b96a9;
+        background: #558b71;
       }
       .fullPrg {
         display: flex;
