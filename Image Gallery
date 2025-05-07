@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Image Galler</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100dvh;
+        background: #320d3e;
+      }
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px purple;
+      }
+      .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      h3 {
+        color: wheat;
+        text-transform: capitalize;
+      }
+      .img {
+        height: 250px;
+        width: 400px;
+        /* border: 2px solid; */
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 3px 3px 5px plum;
+        transition: 0.3s;
+      }
+      .text {
+        position: absolute;
+        width: 100%;
+        bottom: -200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        text-transform: capitalize;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.3s;
+        background: linear-gradient(transparent, purple);
+        color: white;
+        font-weight: 700;
+      }
+      .img:hover {
+        scale: 1.01;
+      }
+      .img:hover .text {
+        bottom: 0;
+      }
+      .icon-box {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+      }
+      .follow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .icon {
+        font-size: 20px;
+        display: flex;
+        gap: 10px;
+        border: 2px solid plum;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+      }
+      .icon::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: -5px;
+        background: white;
+        border-radius: 50%;
+        height: 5px;
+        width: 5px;
+        transition: 0.3s;
+        z-index: -1;
+      }
+      .icon:hover::before {
+        scale: 60;
+        border: 2px solid transparent;
+      }
+      .icon:hover a,
+      .icon:hover i {
+        color: #320d3e;
+      }
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: #ffd79d;
+      }
+      i {
+        color: white;
+      }
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      @media (max-width: 1220px) {
+        body {
+          padding: 20px 0;
+          height: max-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullPrg">
+      <h1>image gallery</h1>
+      <div class="img-box">
+        <div class="img">
+          <img
+            src="https://images.unsplash.com/photo-1470093851219-69951fcbb533?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <div class="text">white fox</div>
+        </div>
+        <div class="img">
+          <img
+            src="https://images.unsplash.com/photo-1583795128727-6ec3642408f8?q=80&w=1957&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <div class="text">cat</div>
+        </div>
+        <div class="img">
+          <img
+            src="https://img.freepik.com/free-photo/luxury-sun-beach-perfect-bay_1232-4212.jpg?t=st=1746627135~exp=1746630735~hmac=9c7af2fdcd916528ec67639767bbe5a0796a67f57f177f3963e9a9362f91e677&w=1380"
+            alt=""
+          />
+          <div class="text">maldives</div>
+        </div>
+        <div class="img">
+          <img
+            src="https://img.freepik.com/free-photo/natures-beauty-captured-colorful-flower-close-up-generative-ai_188544-8593.jpg?t=st=1746627257~exp=1746630857~hmac=87369af84cc73f2381a1fb4eaa8bc5c44e45f31d52eb57dc454d2943030599dd&w=1380"
+            alt=""
+          />
+          <div class="text">flowers</div>
+        </div>
+        <div class="img">
+          <img
+            src="https://img.freepik.com/free-photo/eagles-close-up-portrait_23-2150536618.jpg?t=st=1746627435~exp=1746631035~hmac=ec5b3802bee9dbeae20f89f08967b07e62060b4ff6d072021dc8ea24dcc742c2&w=1380"
+            alt=""
+          />
+          <div class="text">Hawk</div>
+        </div>
+        <div class="img">
+          <img
+            src="https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <div class="text">sun set</div>
+        </div>
+      </div>
+      <div class="follow">
+        <h3>follow :</h3>
+        <div class="icon-box">
+          <div class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+            <div class="name">
+              <a href="https://www.linkedin.com/in/sathish-kumar-12o3o5/"
+                >linkedin</a
+              >
+            </div>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-github"></i>
+            <div class="name">
+              <a href="https://github.com/Sathish12kumar">github</a>
+            </div>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-codepen"></i>
+            <div class="name">
+              <a href="https://codepen.io/sathishkumar-boopathi">codepen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
